@@ -1,0 +1,12 @@
+Check,Count,Result,Action
+Total records,10,10 records supplied,Retained
+Missing values,0,No missing values found,No action
+Duplicate Patient IDs,0,No duplicate IDs found,No action
+Invalid PatientID format,0,None found,No action
+Age validation,0,No exceptions found,No action
+Gender values,0,No exceptions found,No action
+Dosage numeric/positive,0,No exceptions found,No action
+Treatment duration,0,No exceptions found,No action
+Readmitted values,0,No exceptions found,No action
+Blood pressure structure,0,No exceptions found,No action
+Cholesterol numeric/positive,0,No exceptions found,No action

@@ -1,0 +1,25 @@
+EDVYRO TASK 2 — REPRODUCIBLE VALIDATION RULES
+
+Dataset: healthcare_patients_sample.csv
+Purpose: privacy-aware governance and cleaning of synthetic/de-identified patient records.
+
+Rules:
+1. PatientID must be non-empty, match PAT-### format, and be unique.
+2. Every field must be non-empty; missing values are logged rather than clinically imputed.
+3. Age must be an integer in the validation range 0–120.
+4. Gender must be one of the supplied categories: Male or Female.
+5. DosageMg must be numeric and greater than 0.
+6. TreatmentDurationDays must be a positive integer.
+7. Readmitted must be Yes or No.
+8. BloodPressure must contain numeric systolic/diastolic components, both greater than 0.
+9. CholesterolLevel must be numeric and greater than 0.
+10. No clinical value is invented, estimated, or replaced during cleaning.
+
+Result for supplied 10-row sample:
+- Missing values: 0
+- Duplicate Patient IDs: 0
+- Validation exceptions: 0
+- Cleaned output is unchanged from the supplied records because no exception required a correction.
+
+Note:
+The supplied dataset does not define clinical reference ranges or measurement units for every clinical field. Therefore, this task applies structural/data-quality validation rather than claiming medical normality.

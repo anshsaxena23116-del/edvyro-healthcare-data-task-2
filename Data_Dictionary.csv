@@ -1,0 +1,11 @@
+Field,Data Type,Classification,Privacy/Governance Rationale,Validation Rule
+PatientID,Text,Identifier,Coded patient identifier; no direct name/contact/address is present.,PAT-### format; unique; non-empty
+Age,Integer,Demographic,"Age is provided rather than date of birth, reducing direct-identification detail.",Integer; validation range 0–120
+Gender,Categorical,Demographic,Limited demographic category; no direct identifier.,Male/Female in supplied sample
+Diagnosis,Text/Categorical,Clinical,Clinical attribute needed for healthcare analytics; not a direct identifier.,Non-empty
+PrimaryMedication,Text/Categorical,Clinical,Medication attribute used for analysis; not a direct identifier.,Non-empty
+DosageMg,Numeric,Clinical,Medication dosage field; unit is represented by the field name.,Numeric and > 0
+TreatmentDurationDays,Integer,Clinical,Treatment duration in days.,Positive integer
+Readmitted,Categorical,Outcome,Readmission outcome used for analysis.,Yes/No
+BloodPressure,Structured text,Clinical,Systolic/diastolic measurement stored as one field.,"Numeric systolic/diastolic, both > 0"
+CholesterolLevel,Numeric,Clinical,Cholesterol measurement; the supplied file does not state a unit.,Numeric and > 0
